@@ -59,7 +59,7 @@ describe('Calculator Test Suite ', function () {
   describe('#Calculator - Subtract', function () {
     it('Should fail to calculate the difference between two', function() {
       const result = calculator.subtract(10,7);
-      const expected = 3;
+      const expected = 4;
       assert.notStrictEqual( result, expected );
     });
   });
