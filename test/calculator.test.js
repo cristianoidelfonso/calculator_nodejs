@@ -13,6 +13,14 @@ describe('Calculator Test Suite ', function () {
     console.log('Restoring the environment after running the tests');
   });
 
+  describe('#Calculator - Pow', function () {
+    it('Should return the power of two numbers, given the first the base and the second the exponent', function () {
+      const result = calculator.pow(7, 2);
+      const expected = 49;
+      assert.strictEqual(result, expected);
+    });
+  });
+
 
   describe('#Calculator - Sum', function () {
     const tests = [
@@ -24,7 +32,7 @@ describe('Calculator Test Suite ', function () {
     ];
 
     tests.forEach(({ args, expected }) => {
-      it.only (`correctly adds ${args.length} args`, function () {
+      it(`correctly adds ${args.length} args`, function () {
         const res = calculator.sum(args);
         assert.strictEqual(res, expected);
       });

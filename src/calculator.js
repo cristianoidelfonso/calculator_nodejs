@@ -22,6 +22,10 @@ class Calculator {
   static sum(args) {
     return args.reduce((prev, curr) => prev + curr, 0);
   }
+
+  static pow(x, y) {
+    return Math.pow(x, y);
+  }
 }
 
 module.exports = Calculator;
